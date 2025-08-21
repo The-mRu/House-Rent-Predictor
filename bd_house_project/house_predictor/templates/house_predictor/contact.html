@@ -1,0 +1,171 @@
+{% extends 'house_predictor/base.html' %}
+{% block title %}Contact Us - House Rent Predictor{% endblock title %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="container text-center">
+        <h1 class="display-4 fw-bold">Contact Us</h1>
+        <p class="lead">Get in touch with us for questions, support, or feedback</p>
+    </div>
+</section>
+
+<!-- Main Content -->
+<section class="container">
+    <div class="row">
+        <div class="col-lg-10 mx-auto content-card">
+            <h2 class="text-center mb-4"><i class="fas fa-envelope me-2"></i>Get In Touch</h2>
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="mb-4">
+                        <h4><i class="fas fa-info-circle me-2"></i>Contact Information</h4>
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="bg-primary rounded-circle p-3 me-3">
+                                <i class="fas fa-envelope text-white"></i>
+                            </div>
+                            <div>
+                                <h5 class="mb-0">Email</h5>
+                                <p class="mb-0">fsrrayhan@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="bg-success rounded-circle p-3 me-3">
+                                <i class="fas fa-clock text-white"></i>
+                            </div>
+                            <div>
+                                <h5 class="mb-0">Response Time</h5>
+                                <p class="mb-0">Within 24 hours</p>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex align-items-center">
+                            <div class="bg-info rounded-circle p-3 me-3">
+                                <i class="fas fa-globe text-white"></i>
+                            </div>
+                            <div>
+                                <h5 class="mb-0">Location</h5>
+                                <p class="mb-0">Bangladesh</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="mb-4">
+                        <h4><i class="fas fa-paper-plane me-2"></i>Send Us a Message</h4>
+                        <p>Click the button below to send us an email directly from your email client.</p>
+                        
+                        <div class="text-center mt-4">
+                            <a href="mailto:fsrrayhan@gmail.com" class="btn btn-predict btn-lg">
+                                <i class="fas fa-envelope me-2"></i>Send Email
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQ Section -->
+    <div class="row mt-5">
+        <div class="col-12 content-card">
+            <h2 class="text-center mb-4"><i class="fas fa-question-circle me-2"></i>Frequently Asked Questions</h2>
+            
+            <div class="accordion" id="faqAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            How accurate are the rent predictions?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Our predictions are based on machine learning algorithms trained on thousands of property listings across Bangladesh. While we strive for accuracy, actual market rates may vary based on specific property conditions and negotiation.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Can I request features for the predictor?
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Absolutely! We welcome feedback and feature requests. Please email us at fsrrayhan@gmail.com with your suggestions.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Do you cover all areas of Bangladesh?
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            We currently focus on major cities but are continuously expanding our database to include more areas across Bangladesh.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Additional Contact Options -->
+    <div class="row mt-5">
+        <div class="col-12 content-card">
+            <h2 class="text-center mb-4"><i class="fas fa-comments me-2"></i>Other Ways to Connect</h2>
+            
+            <div class="row text-center">
+                <div class="col-md-4 mb-4">
+                    <div class="bg-primary rounded-circle p-4 mx-auto mb-3" style="width: 80px; height: 80px;">
+                        <i class="fas fa-comment-dots fa-2x text-white"></i>
+                    </div>
+                    <h4>Quick Questions</h4>
+                    <p>For quick inquiries, email us directly at fsrrayhan@gmail.com</p>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <div class="bg-success rounded-circle p-4 mx-auto mb-3" style="width: 80px; height: 80px;">
+                        <i class="fas fa-bug fa-2x text-white"></i>
+                    </div>
+                    <h4>Report Issues</h4>
+                    <p>Found a bug or issue? Let us know so we can fix it promptly.</p>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <div class="bg-info rounded-circle p-4 mx-auto mb-3" style="width: 80px; height: 80px;">
+                        <i class="fas fa-lightbulb fa-2x text-white"></i>
+                    </div>
+                    <h4>Suggestions</h4>
+                    <p>Have ideas to improve our service? We'd love to hear them!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="row mt-5">
+        <div class="col-12 text-center">
+            <div class="content-card bg-light">
+                <h3 class="mb-3">Ready to get started?</h3>
+                <p class="lead mb-4">Try our rent prediction tool or get in touch with us</p>
+                <a href="{% url 'predict_page' %}" class="btn btn-predict btn-lg me-3">
+                    <i class="fas fa-calculator me-2"></i>Predict Rent
+                </a>
+                <a href="mailto:fsrrayhan@gmail.com" class="btn btn-outline-primary btn-lg me-3">
+                    <i class="fas fa-envelope me-2"></i>Email Us
+                </a>
+                <a href="{% url 'home_page' %}" class="btn btn-outline-secondary btn-lg">
+                    <i class="fas fa-home me-2"></i>Back to Home
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}

@@ -1,0 +1,102 @@
+{% extends 'house_predictor/base.html' %}
+{% block title %}House Rent Predictor - Home{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="container text-center">
+        <h1 class="display-4 fw-bold">House Rent Predictor</h1>
+        <p class="lead">Accurate rental valuation for properties in Bangladesh using advanced machine learning</p>
+        <a href="{% url 'predict_page' %}" class="btn btn-light btn-lg mt-3">
+            <i class="fas fa-calculator me-2"></i>Predict Your Rent
+        </a>
+    </div>
+</section>
+
+<!-- Project Introduction -->
+<section class="container">
+    <div class="row">
+        <div class="col-lg-10 mx-auto content-card">
+            <h2 class="text-center mb-4">About Our Project</h2>
+            <p class="lead">This Django-based web application predicts house rent prices in Bangladesh using machine learning algorithms trained on local market data.</p>
+            
+            <div class="row mt-5">
+                <div class="col-md-6">
+                    <h4><i class="fas fa-database me-2"></i>Data Sources</h4>
+                    <p>Our model is trained on comprehensive property listing data from across Bangladesh, including:</p>
+                    <ul>
+                        <li>Property listings from major cities</li>
+                        <li>Historical rental price data</li>
+                        <li>Property features and amenities</li>
+                        <li>Location-based pricing factors</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h4><i class="fas fa-cogs me-2"></i>Technology Stack</h4>
+                    <ul>
+                        <li>Django web framework</li>
+                        <li>Machine learning with Scikit-Learn</li>
+                        <li>Python for backend processing</li>
+                        <li>SQLite database</li>
+                        <li>HTML/CSS/JavaScript for frontend</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="text-center mt-4">
+                <a href="{% url 'predict_page' %}" class="btn btn-predict btn-lg">
+                    <i class="fas fa-bolt me-2"></i>Try Our Predictor
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <div class="row mt-5">
+        <h2 class="text-center mb-4">Why Use Our Rent Predictor</h2>
+        <div class="col-md-4 mb-4">
+            <div class="content-card text-center h-100">
+                <div class="feature-icon"><i class="fas fa-database"></i></div>
+                <h3>Data Driven</h3>
+                <p>Our algorithms analyze thousands of rental listings across Bangladesh to provide accurate predictions based on real market trends.</p>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="content-card text-center h-100">
+                <div class="feature-icon"><i class="fas fa-brain"></i></div>
+                <h3>ML Powered</h3>
+                <p>Advanced machine learning models continuously learn and improve prediction accuracy with each use.</p>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="content-card text-center h-100">
+                <div class="feature-icon"><i class="fas fa-bolt"></i></div>
+                <h3>Fast Results</h3>
+                <p>Get instant rental valuations without the need for lengthy manual appraisals or waiting periods.</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Popular Locations -->
+    <div class="row mt-5">
+        <div class="col-12 content-card">
+            {% comment %} <h2 class="text-center mb-4">Popular Locations in Bangladesh</h2>
+            <div class="text-center">
+                <span class="location-badge">Dhaka</span>
+                <span class="location-badge">Chattogram</span>
+                <span class="location-badge">Sylhet</span>
+                <span class="location-badge">Khulna</span>
+                <span class="location-badge">Barishal</span>
+                <span class="location-badge">Rajshahi</span>
+                <span class="location-badge">Rangpur</span>
+                <span class="location-badge">Mymensingh</span>
+                <span class="location-badge">Cox's Bazar</span>
+                <span class="location-badge">Comilla</span>
+                <span class="location-badge">Narayanganj</span>
+                <span class="location-badge">Gazipur</span> {% endcomment %}
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+

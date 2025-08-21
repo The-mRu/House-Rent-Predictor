@@ -1,0 +1,61 @@
+{% extends 'house_predictor/base.html' %}
+{% block title %}Prediction Result{% endblock %}
+
+{% block content %}
+<section class="hero-section">
+    <div class="container text-center">
+        <h1 class="display-4 fw-bold">Prediction Results</h1>
+        <p class="lead">Your estimated monthly rental price</p>
+    </div>
+</section>
+
+<section class="container">
+    <div class="row">
+        <div class="col-lg-10 mx-auto content-card">
+            <h2 class="text-center mb-4"><i class="fas fa-chart-line me-2"></i>Prediction Results</h2>
+            
+            <!-- Prediction Result -->
+            <div class="prediction-result">
+                <h3><i class="fas fa-tachometer-alt me-2"></i>Predicted Monthly Rent</h3>
+                <div class="rent-amount">৳ {{ predicted_price }}</div>
+                <p>Based on similar properties in your selected location</p>
+            </div>
+            
+            <!-- Input Summary -->
+            <div class="mt-5">
+                <h4 class="mb-4">📌 Your Property Details</h4>
+                <div class="row">
+                    <div class="col-md-6">
+                        <ul class="list-group">
+                            <li class="list-group-item"><strong>Bedrooms:</strong> {{ beds }}</li>
+                            <li class="list-group-item"><strong>Bathrooms:</strong> {{ bath }}</li>
+                            <li class="list-group-item"><strong>Area:</strong> {{ area_sqrt }} sq ft</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="list-group">
+                            <li class="list-group-item"><strong>Property Type:</strong> {{ type_ }}</li>
+                            <li class="list-group-item"><strong>City:</strong> {{ city }}</li>
+                            <li class="list-group-item"><strong>Place:</strong> {{ place }}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Action Buttons -->
+            <div class="text-center mt-5">
+                <a href="{% url 'predict_page' %}" class="btn btn-predict me-3">
+                    <i class="fas fa-redo me-2"></i>Predict Again
+                </a>
+                <a href="{% url 'home_page' %}" class="btn btn-outline-secondary">
+                    <i class="fas fa-home me-2"></i>Back to Home
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+
+
+

@@ -1,0 +1,92 @@
+{% extends 'house_predictor/base.html' %}
+{% block title %}Predict House Rent{% endblock title %}
+
+{% block content %}
+<section class="hero-section">
+    <div class="container text-center">
+        <h1 class="display-4 fw-bold">Predict Your Rent</h1>
+        <p class="lead">Enter your property details to get an accurate rental estimate</p>
+    </div>
+</section>
+
+<!-- Prediction Form -->
+<section class="container">
+    <div class="row">
+        <div class="col-lg-10 mx-auto content-card">
+            {% comment %} <div class="model-badge">ML Model: ml_model.pkl</div> {% endcomment %}
+            <h2 class="text-center mb-4"><i class="fas fa-calculator me-2"></i>Property Details</h2>
+            
+            <div class="input-highlight">
+                <i class="fas fa-info-circle me-2"></i>Fields marked with * are required. Others have default values if not specified.
+            </div>
+            
+            <form action="{% url 'predict_result' %}" method="get" class="row g-3">
+                <!-- Beds -->
+                <div class="col-md-6">
+                    <label for="beds" class="form-label">Bedrooms *</label>
+                    <select name="beds" id="beds" class="form-select" required>
+                        {% for b in beds_options %}
+                        <option value="{{ b }}" {% if b == 2 %}selected{% endif %}>{{ b }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                <!-- Bath -->
+                <div class="col-md-6">
+                    <label for="bath" class="form-label">Bathrooms *</label>
+                    <select name="bath" id="bath" class="form-select" required>
+                        {% for b in bath_options %}
+                        <option value="{{ b }}" {% if b == 2 %}selected{% endif %}>{{ b }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                <!-- Area -->
+                <div class="col-md-12">
+                    <label for="area_sqrt" class="form-label">Area (sqft) *</label>
+                    <input type="number" name="area_sqrt" id="area_sqrt" class="form-control" placeholder="1500" value="1500" required>
+                </div>
+
+                <!-- Type -->
+                <div class="col-md-6">
+                    <label for="type_" class="form-label">Property Type *</label>
+                    <select name="type_" id="type_" class="form-select" required>
+                        {% for t in type_options %}
+                        <option value="{{ t }}" {% if t == "Apartment" %}selected{% endif %}>{{ t }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                <!-- City -->
+                <div class="col-md-6">
+                    <label for="city" class="form-label">City *</label>
+                    <select name="city" id="city" class="form-select" required>
+                        {% for c in city_options %}
+                        <option value="{{ c }}" {% if c == "Dhaka" %}selected{% endif %}>{{ c }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                <!-- Place with suggestions -->
+                <div class="col-md-12">
+                    <label for="place" class="form-label">Place *</label>
+                    <input list="places" name="place" id="place" class="form-control" placeholder="Type or select place" value="Bashundhara R-A" required>
+                    <datalist id="places">
+                        {% for p in place_options %}
+                        <option value="{{ p }}">
+                        {% endfor %}
+                    </datalist>
+                </div>
+
+                <!-- Submit -->
+                <div class="col-12 text-center mt-3">
+                    <button type="submit" class="btn btn-predict btn-lg"><i class="fas fa-bolt me-2"></i>Predict Rent</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock content %}
+
+
+
