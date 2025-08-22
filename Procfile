@@ -1,1 +1,1 @@
-web: gunicorn bd_house_project.wsgi:application --bind 0.0.0.0:$PORT
+web: gunicorn bd_house_project.wsgi:application
