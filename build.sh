@@ -1,10 +1,7 @@
-
 #!/usr/bin/env bash
-# Exit on error
+# exit on error
 set -o errexit
 
-# Install dependencies
 pip install -r requirements.txt
-
-# Apply database migrations (if you have any)
-# python manage.py migrate
+python manage.py collectstatic --no-input
+python manage.py migrate
